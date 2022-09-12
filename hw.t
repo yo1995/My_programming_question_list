@@ -8,10 +8,8 @@ Tests Parrot Internal Representation with Linguist.
 =cut
 
 .sub main :main
-    .include 'test_more.pir'
-
-    .sub 'hello'
-       say "Hello World"
-    .end
-
+    .local string hello
+    hello = "Hello World\n"
+    $S1 = hello
+    print $S1
 .end
